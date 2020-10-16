@@ -54,6 +54,8 @@ class Process extends Command
     public function __construct()
     {
         parent::__construct();
+
+        // Load API configuration
         $this->api = json_decode(json_encode(config('baller')));
     }
 
@@ -71,6 +73,12 @@ class Process extends Command
         return 0;
     }
 
+    /**
+     * Parse stats collection and get top ten average scorers
+     * Output response to console
+     *
+     * @return null
+     */
     private function getTopTenAvgScorers()
     {
         // Sort stats by pts, DESC
