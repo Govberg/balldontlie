@@ -26,7 +26,7 @@ class Process extends Command
     protected $players;
 
     /**
-     * Collection of stats
+     * Collection of Stats
      *
      * @var stats collection
      */
